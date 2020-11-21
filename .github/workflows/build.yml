@@ -12,6 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: recursive
 
     - run: make
       working-directory: customer_app
@@ -29,6 +31,8 @@ jobs:
         msystem: MSYS
 
     - uses: actions/checkout@v2
+      with:
+        submodules: recursive
 
     - run: make
       shell: msys2 {0}
